@@ -41,6 +41,8 @@ label_encoder = preprocessing.LabelEncoder()
 df['MAKE']= label_encoder.fit_transform(df['MAKE'])
 df['MODEL']= label_encoder.fit_transform(df['MODEL'])
 df['VEHICLE CLASS']= label_encoder.fit_transform(df['VEHICLE CLASS'])
+df['ENGINE SIZE']= label_encoder.fit_transform(df['ENGINE SIZE'])
+df['CYLINDERS']= label_encoder.fit_transform(df['CYLINDERS'])
 df['TRANSMISSION']= label_encoder.fit_transform(df['TRANSMISSION'])
 df['FUEL']= label_encoder.fit_transform(df['FUEL'])
 
