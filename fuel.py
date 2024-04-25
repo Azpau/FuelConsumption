@@ -36,6 +36,15 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
+from sklearn import preprocessing
+label_encoder = preprocessing.LabelEncoder()
+df['MAKE']= label_encoder.fit_transform(df['MAKE'])
+df['MODEL']= label_encoder.fit_transform(df['MODEL'])
+df['VEHICLE CLASS']= label_encoder.fit_transform(df['VEHICLE CLASS'])
+df['TRANSMISSION']= label_encoder.fit_transform(df['TRANSMISSION'])
+df['FUEL']= label_encoder.fit_transform(df['FUEL'])
+
+
 loaded_model = pickle.load(open("FuelConsumptionModel.h5", "rb"))
 
 prediction = loaded_model.predict(df)
