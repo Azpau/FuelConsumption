@@ -45,6 +45,7 @@ df['ENGINE SIZE']= label_encoder.fit_transform(df['ENGINE SIZE'])
 df['CYLINDERS']= label_encoder.fit_transform(df['CYLINDERS'])
 df['TRANSMISSION']= label_encoder.fit_transform(df['TRANSMISSION'])
 df['FUEL']= label_encoder.fit_transform(df['FUEL'])
+df['COEMISSIONS ']= label_encoder.fit_transform(df['COEMISSIONS '])
 
 
 loaded_model = pickle.load(open("FuelConsumptionModel.h5", "rb"))
