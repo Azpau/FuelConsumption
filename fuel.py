@@ -18,6 +18,7 @@ def user_input_features():
     Cylinders = st.sidebar.selectbox('Cylinder',['4','6','8','12','3','10','5'])
     Transmission = st.sidebar.selectbox('Transmission',['A4','M5','AS5','AS4','M6','A5','A3','AS6'])
     Fuel_Type = st.sidebar.selectbox('Fuel Type',['X','Z','E','N','D'])
+    COEmissions = st.sidebar.slider('COEmissions', 104, 582, 200)
     data = {'MAKE': Make,
             'MODEL': Model,
             'VEHICLE CLASS': Vehicle_Class,
